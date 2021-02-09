@@ -11,7 +11,7 @@ function tbUpdate() {
   textBlock = {
     textDisplayed: "ADARSH SINGH",
     yf: canvas.height / 2,
-    // yi=yf-
+    yi:canvas.height/2-85//guessed text height
     
   }
   context.font = "120px helvetica"//setting font for text
@@ -35,7 +35,7 @@ let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
 
 let touchInput = false;
 
-generate();
+
 resize();
 step();
 
@@ -45,23 +45,20 @@ canvas.ontouchmove = onTouchMove;
 canvas.ontouchend = onMouseLeave;
 document.onmouseleave = onMouseLeave;
 
-function generate() {
 
-   for( let i = 0; i < STAR_COUNT; i++ ) {
+
+function placeStar() {
+
+for (let x = textBlock.xi; x < textBlock.xf; x+=30) {
+  for (let y = textBlock.yi; y < textBlock.yf; y+=30) {
     stars.push({
-      x: 0,
-      y: 0,
+      x,
+      y,
       z: STAR_MIN_SCALE + Math.random() * ( 1 - STAR_MIN_SCALE )
     });
-   }
-
+  }
+  
 }
-
-function placeStar( star ) {
-
-  star.x = canvas.width/2-12*Math.random()*120/2
-  star.y = height/2
-
 }
 
 function recycleStar( star ) {
@@ -125,8 +122,9 @@ function resize() {
   canvas.width = width;
   canvas.height = height;
 
-  stars.forEach( placeStar );
-tbUpdate()
+  tbUpdate()
+  placeStar ();
+
 }
 
 function step() {
