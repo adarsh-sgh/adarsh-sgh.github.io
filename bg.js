@@ -1,12 +1,27 @@
 //This code was modified by me(adarsh singh) by copying  from https://codepen.io/hakimel/pen/bzrZGo
 const STAR_COUNT = ( window.innerWidth * window.innerHeight ) / 10000,
       STAR_SIZE = 3,
-      STAR_MIN_SCALE = 0.2,
-      OVERFLOW_THRESHOLD = 50;
+  STAR_MIN_SCALE = 0.2,
+  OVERFLOW_THRESHOLD = 50;
+const canvas = document.querySelector('canvas'),
+  context = canvas.getContext('2d')
 
-const canvas = document.querySelector( 'canvas' ),
-      context = canvas.getContext( '2d' );
-
+let textBlock
+function tbUpdate() {
+  textBlock = {
+    textDisplayed: "ADARSH SINGH",
+    yf: canvas.height / 2,
+    // yi=yf-
+    
+  }
+  context.font = "120px helvetica"//setting font for text
+  context.fillStyle = 'white'
+  textBlock.textWidth= context.measureText(textBlock.textDisplayed).width,
+    textBlock.xi=canvas.width/2 - textBlock.textWidth/2
+    textBlock.xf=textBlock.xi + textBlock.textWidth
+   
+  
+}
 let scale = 1, // device pixel ratio
     width,
     height;
@@ -111,7 +126,7 @@ function resize() {
   canvas.height = height;
 
   stars.forEach( placeStar );
-
+tbUpdate()
 }
 
 function step() {
@@ -177,10 +192,8 @@ function render() {
   } );
 
   //write my name
-  context.font="120px helvetica"
-  context.fillStyle='white'
-  context.fillText("ADARSH SINGH",canvas.width/2-12*120/2,canvas.height/2)
-
+  
+  context.fillText(textBlock.textDisplayed,textBlock.xi,textBlock.yf)
 }
 
 function movePointer( x, y ) {
