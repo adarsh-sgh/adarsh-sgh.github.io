@@ -49,7 +49,7 @@ document.onmouseleave = onMouseLeave;
 
 function placeStar() {
 
-for (let x = textBlock.xi; x < textBlock.xf; x+=30) {
+for (let x = textBlock.xi; x < textBlock.xf; x+=30) {//increase += value to dec. stars
   for (let y = textBlock.yi; y < textBlock.yf; y+=30) {
     stars.push({
       x,
