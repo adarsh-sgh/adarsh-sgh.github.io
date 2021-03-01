@@ -7,9 +7,10 @@ body {
       margin: 0;
   }
   canvas {
-    z-index: 1;
-    position: fixed;
-    height: 100%;
+    /* z-index: 1; */
+    /* position: fixed; */
+    /* height: 100%;
+    width: 100%; */
     margin: 0;
   }
   
@@ -21,4 +22,6 @@ body {
     text-decoration: none;
   }
   
-  
+  #candiv{
+    overflow-x: hidden;
+  }

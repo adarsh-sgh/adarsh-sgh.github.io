@@ -1,5 +1,6 @@
 //This code was modified by me(adarsh singh) by copying  from https://codepen.io/hakimel/pen/bzrZGo
-const STAR_COUNT = ( window.innerWidth * window.innerHeight ) / 10000,
+const
+//  STAR_COUNT = ( window.innerWidth * window.innerHeight ) / 10000,
       STAR_SIZE = 3,
   STAR_MIN_SCALE = 0.2,
   OVERFLOW_THRESHOLD = 50;
@@ -43,14 +44,31 @@ window.onresize = resize;
 canvas.onmousemove = onMouseMove;
 canvas.ontouchmove = onTouchMove;
 canvas.ontouchend = onMouseLeave;
+canvas.onclick= canvasClickHandler;
 document.onmouseleave = onMouseLeave;
 
-
+function canvasClickHandler(evnt) {
+  let xi=canvas.getBoundingClientRect().left;
+  let yi=canvas.getBoundingClientRect().top;
+  let xcanv=evnt.clientX-xi;
+  let ycanv=evnt.clientY-yi;
+  // console.log(ycanv,'ycanv')
+  let nameClicked=!!(
+    textBlock.xi<xcanv&&
+    textBlock.xf>xcanv&&
+    textBlock.yi<ycanv&&
+    textBlock.yf>ycanv
+  )
+if (nameClicked) {
+  placeStar();
+  console.log("You;hey you why clicked my name?")
+}
+}
 
 function placeStar() {
 
-for (let x = textBlock.xi; x < textBlock.xf; x+=30) {//increase += value to dec. stars
-  for (let y = textBlock.yi; y < textBlock.yf; y+=30) {
+for (let x = textBlock.xi; x < textBlock.xf; x+=100) {//increase += value to dec. stars
+  for (let y = textBlock.yi; y < textBlock.yf; y+=35) {
     stars.push({
       x,
       y,
