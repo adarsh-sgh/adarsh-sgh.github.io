@@ -132,7 +132,8 @@ function recycleStar( star ) {
 
 function resize() {
 
-  scale = window.devicePixelRatio || 1;
+  // scale = window.devicePixelRatio || 1;
+//above line was commented and it became responsive :strange
 
   width = window.innerWidth * scale;
   height = window.innerHeight * scale;
