@@ -15,7 +15,7 @@ function tbUpdate() {
     yi:canvas.height/2-85//guessed text height
     
   }
-  context.font = "120px helvetica"//setting font for text
+  context.font = "6vw helvetica"//setting font for text
   context.fillStyle = 'white'
   textBlock.textWidth= context.measureText(textBlock.textDisplayed).width,
     textBlock.xi=canvas.width/2 - textBlock.textWidth/2
