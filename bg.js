@@ -10,7 +10,7 @@ const canvas = document.querySelector('canvas'),
 let textBlock
 function tbUpdate() {
   textBlock = {
-    textDisplayed: "ADARSH SINGH",
+    textDisplayed: "LAKKI SINGH",
     yf: canvas.height / 2,
     yi:canvas.height/2-85//guessed text height
     
@@ -61,10 +61,15 @@ function canvasClickHandler(evnt) {
   )
 if (nameClicked) {
   placeStar();
-  console.log("You;hey you why clicked my name?")
+  textBlock.textDisplayed = randomise(["Adarsh Singh", "Lakki Singh" ,"Lucky Singh" ,"Thakur Lakki"])
 }
 }
-
+// return random element from the input array
+function randomise(arr){
+let n = arr.length;
+let i = Math.floor(Math.random() * n);
+return arr[i];
+}
 function placeStar() {
 
 for (let x = textBlock.xi; x < textBlock.xf; x+=100) {//increase += value to dec. stars
