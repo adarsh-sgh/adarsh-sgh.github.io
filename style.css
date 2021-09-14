@@ -9,9 +9,12 @@ h2{
 }
 #githubData{
     width: 100%;
-    height: 100%;
+    height: 1069px;
+   
 }
-
+#githubData html{
+  overflow-y: hidden;
+}
 .hero-waves {
     display: block;
     width: 100%;
