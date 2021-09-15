@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bg.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Adarsh Singh</title>
-</head>
-<body>
-    <!-- <h2>Hi;Adarsh Is Excited On Your Visit</h2> -->
-    <div id="candiv">
-    <canvas></canvas>
-  </div>
-    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-        <defs>
-          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-        </path></defs>
-        <g class="wave1">
-          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
-        </use></g>
-        <g class="wave2">
-          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
-        </use></g>
-        <g class="wave3">
-          <use xlink:href="#wave-path" x="50" y="9" fill="#eee9df">
-        </use></g>
-      </svg>
-      <br>
-    <iframe src="https://profile-summary-for-github.com/user/lkiThakur" frameborder="0" id="githubData"></iframe>
-   
-    <script src="bg.js"></script>
-    <script src="main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="bg.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<title>Adarsh Singh</title>
+	</head>
+	<body>
+		<!-- <h2>Hi;Adarsh Is Excited On Your Visit</h2> -->
+		<div id="candiv">
+			<canvas id="can1"></canvas>
+		</div>
+		<svg
+			class="hero-waves"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 24 150 28 "
+			preserveAspectRatio="none"
+		>
+			<defs>
+				<path
+					id="wave-path"
+					d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+				></path>
+			</defs>
+			<g class="wave1">
+				<use
+					xlink:href="#wave-path"
+					x="50"
+					y="3"
+					fill="rgba(255,255,255, .1)"
+				></use>
+			</g>
+			<g class="wave2">
+				<use
+					xlink:href="#wave-path"
+					x="50"
+					y="0"
+					fill="rgba(255,255,255, .2)"
+				></use>
+			</g>
+			<g class="wave3">
+				<use xlink:href="#wave-path" x="50" y="9" fill="#eee9df"></use>
+			</g>
+		</svg>
+		<br />
+		<iframe
+			src="https://profile-summary-for-github.com/user/lkiThakur"
+			frameborder="0"
+			id="githubData"
+		></iframe>
+		<div id="skillsDiv">
+			<canvas id="skills" width="500" height="500">
+				<!--    <img src = "https://img.shields.io/badge/JavaScript-red?logo=JavaScript&amp;style=for-the-badge" alt                             = "JS">
+    <img    src      = "https://img.shields.io/badge/html5%20-%23E34F26.svg?&amp;style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt = "HTML">
+    <img    src      = "https://img.shields.io/badge/css3%20-%231572B6.svg?&amp;style=for-the-badge&amp;logo=css3&amp;logoColor=white" alt   = "CSS">
+    <img    src      = "https://img.shields.io/badge/git%20-%23F05033.svg?&amp;style=for-the-badge&amp;logo=git&amp;logoColor=white" alt     = "Git">
+    <img    src      = "https://img.shields.io/badge/NodeJs-black?&amp;style=for-the-badge&amp;logo=Node.js&amp;logoColor=white" alt         = "Node.js">
+    <img    src      = "https://img.shields.io/badge/MongoDB-red?&amp;style=for-the-badge&amp;logo=MongoDB&amp;logoColor=green" alt          = "MongoDB">
+    <img    src      = "https://img.shields.io/badge/Express.js-grey?&amp;style=for-the-badge&amp;logo=ExpressJs&amp;logoColor=white" alt    = "Express">
+    <img    src      = "https://img.shields.io/badge/Socket.io-grey?&amp;style=for-the-badge&amp;logo=Socket.io&amp;logoColor=white" alt     = "Socket.io">
+    <img    src      = "https://img.shields.io/badge/puppeteer-grey?&amp;style=for-the-badge&amp;logo=puppeteer&amp;logoColor=white" alt     = "Puppeteer">
+    <img    src      = "https://img.shields.io/badge/typescript-blue?&amp;style=for-the-badge&amp;logo=typescript&amp;logoColor=white" alt   = "typescript">
+    <img    src      = "https://img.shields.io/badge/angular-grey?&amp;style=for-the-badge&amp;logo=angular&amp;logoColor=white" alt         = "Angular">
+    <img    src      = "https://img.shields.io/badge/react-grey?&amp;style=for-the-badge&amp;logo=react&amp;logoColor=white" alt             = "react">
+    <img    src      = "https://img.shields.io/badge/Nest-grey?&amp;style=for-the-badge&amp;logo=nestjs&amp;logoColor=red" alt               = "NestJS">
+    <img    src      = "https://img.shields.io/badge/electron-grey?&amp;style=for-the-badge&amp;logo=electron&amp;logoColor=white" alt       = "electron">
+    <img    src      = "https://img.shields.io/badge/firebase-grey?&amp;style=for-the-badge&amp;logo=firebase&amp;logoColor=yellow" alt      = "fiebase"> -->
+
+				<a href="#">JS</a>
+				<a href="#">HTML</a>
+				<a href="#">CSS</a>
+				<a href="#">Git</a>
+				<a href="#">Node</a>
+				<a href="#">MongoDB</a>
+				<a href="#">Express</a>
+				<a href="#">Socket</a>
+				<a href="#">Puppeteer</a>
+				<a href="#">typescript</a>
+				<a href="#">Angular</a>
+				<a href="#">react</a>
+				<a href="#">NestJS</a>
+				<a href="#">electron</a>
+				<a href="#">fiebase</a>
+			</canvas>
+		</div>
+		<script src="tagCanvas.js"></script>
+		<script src="bg.js"></script>
+		<script src="main.js"></script>
+	</body>
 </html>

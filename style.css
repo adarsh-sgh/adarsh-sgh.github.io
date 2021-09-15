@@ -15,6 +15,17 @@ h2{
 #githubData html{
   overflow-y: hidden;
 }
+#skillsDiv{
+  display: flex;
+}
+#skills{
+  margin: auto;
+}
+#skillsheading{
+  margin-left: 49%;
+    color: violet;
+    
+}
 .hero-waves {
     display: block;
     width: 100%;
