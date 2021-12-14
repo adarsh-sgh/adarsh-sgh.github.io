@@ -1,0 +1,66 @@
+{
+  "Skills": [
+    "JS",
+    "HTML",
+    "CSS",
+    "Git",
+    "Node",
+    "MongoDB",
+    "Express",
+    "Socket",
+    "Puppeteer",
+    "typescript",
+    "Angular",
+    "react",
+    "NestJS",
+    "electron",
+    "fiebase"
+  ],
+  "Projects": {
+    "surbaggi": {
+      "name": "Surbaggi",
+      "description": "",
+      "link": "https://surbaggi.herokuapp.com/",
+      "github": "https://github.com/adarsh-sgh/surbaggi",
+      "techUsed": [
+        "Vanilla js",
+        "Node-js",
+        "SocketIo"
+      ]
+    },
+    "roborebels": {
+      "name": "Roborebels",
+      "description": "",
+      "link": "https://adarsh-sgh.github.io/roborebels/",
+      "github": "https://github.com/adarsh-sgh/roborebels",
+      "techUsed": [
+        "Vanilla js",
+        "Html Canvas"
+      ]
+    },
+    "mathracing": {
+      "name": "Mathracing",
+      "description": "",
+      "link": "https://mathracing.herokuapp.com/",
+      "github": "https://github.com/adarsh-sgh/mathracing",
+      "techUsed": [
+        "Vanilla js",
+        "Node-js",
+        "SocketIo"
+      ]
+    },
+    "Free Fridge": {
+      "name": "Free Fridge",
+      "description": "",
+      "link": "freefridge.herokuapp.com",
+      "github": "https://github.com/adarsh-sgh/free-fridge",
+      "techUsed": [
+        "Vanilla js",
+        "Node-js",
+        "MongoDB",
+        "Html",
+        "CSS"
+      ]
+    }
+  }
+}
